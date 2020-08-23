@@ -1,0 +1,14 @@
+//61. Companies often try to personalize their offers to make them more attractive. One simple way to do this is just to insert the person’s name at various places in the offer. Of course, companies don’t manually type in every person’s name; everything is computer-generated. Write a program that asks the user for their name and then generates an offer like the one below. For simplicity’s sake, you may assume that the person’s f irst and last names are one word each. Enter name: George Washington Dear George Washington, I am pleased to offer you our new Platinum Plus Rewards card at a special introductory APR of 47.99%. George, an offer like this does not come along every day, so I urge you to call now toll-free at 1-800-314-1592. We cannot offer such a low rate for long, George, so call right away.
+
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter your name: ");
+		String first_name = scanner.next();
+		String last_name = scanner.nextLine();
+		
+		System.out.printf("Dear %s %s,\n", first_name,last_name);
+		System.out.printf("\nI am pleased to offer you our new Platinum Plus Rewards card at a special introductory APR of 47.99 %%. %s , an offer like this does not come along every day, so I urge you to call now toll-free at 1-800-314-1592. We cannot offer such a low rate for long, George, so call right away.",first_name);
+	}
+}
